@@ -65,6 +65,21 @@ body {
   margin-top: 10px;
 }
 
+/* for the site header  */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 50%;
+  padding: 30px;
+  text-align: center;
+}
+
 select {
   display: block;
   width: 100%;

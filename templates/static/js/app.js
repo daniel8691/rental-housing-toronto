@@ -18,6 +18,9 @@ d3.csv("static/data/transposed_complete_df.csv").then(function(someData) {
                 'metro_station', 'train_station', 'bus_station', 
                 'bus_stop', 'shopping_mall', "shopping_plaza", "grocery_store"]
 
+    // console.log(Math.round(someData[0][headers[5]] * 100) / 100);
+    // console.log(headers[5] == "price_per_sqft")
+
     // create empty list to store dictionary of data
     var results = []
     // loop through the entire data for extraction
@@ -29,12 +32,18 @@ d3.csv("static/data/transposed_complete_df.csv").then(function(someData) {
         var obj = {}
         // loop through the headers I want to use for the analysis
         for (var j = 0; j<headers.length; j++){
-            obj[headers[j]] = someData[i][headers[j]]
+            if (headers[j] == "price_per_sqft"){
+                obj[headers[j]] = Math.round(someData[i][headers[j]] * 100) / 100;
+            } else {
+                obj[headers[j]] = someData[i][headers[j]]
+            }
+           
         }
         
         results.push(obj)
     }
     console.log(results);
+    
 
 
     /////////////////////////
@@ -71,18 +80,23 @@ d3.csv("static/data/transposed_complete_df.csv").then(function(someData) {
         // remove the table content
         tableBody.html("")
 
+        // get the value of input statement
         var inputValue = inputElement.property("value")
         console.log(inputValue);
 
         // var buttonValue = filterButton.property('value')
         // console.log(buttonValue)
 
+        // filter data based on input value 
         var filteredData = results.filter(function(toronto_data){
             return toronto_data.cluster_labels == inputValue;
         });
+        // check input content
         console.log(filteredData)
 
+        // add data to the chart according to input data
         filteredData.map(function(add_data){
+            // append table row for each iteration
             var row = tableBody.append("tr")
 
             Object.entries(add_data).forEach(function([key,value]){
@@ -93,26 +107,6 @@ d3.csv("static/data/transposed_complete_df.csv").then(function(someData) {
     }    
 
 
-
-
-
-    // function runFunction() {
-    //     // remove the table content
-    //     tableBody.html("")
-
-    //     var inputValue = inputElemenet.property("value");
-    //     console.log(inputValue)
-
-    //     var filterData = tableData.filter(function(rental_data){
-    //         return rental_data.datetime == inputValue
-    //     })
-
-    // }
-
-    // someData.forEach(function(data){
-    //     data.cluster_labels = +data.cluster_labels
-    //     console.log(data.cluster_labels)
-    // })
 });
 
 
