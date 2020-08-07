@@ -22,7 +22,9 @@ d3.csv("static/data/transposed_complete_df.csv").then(function(someData) {
     var results = []
     // loop through the entire data for extraction
     for (var i = 0; i<someData.length; i++){
-        console.log(someData[i].postal_code)
+        // console.log(someData[i].postal_code)
+
+
         // create dictionary to store data
         var obj = {}
         // loop through the headers I want to use for the analysis
@@ -40,22 +42,58 @@ d3.csv("static/data/transposed_complete_df.csv").then(function(someData) {
 
 
     results.map(function(cityData) {
-        // var row = tableBody.append("tr")
+        var row = tableBody.append("tr")
         Object.entries(cityData).forEach(function([key,value]){
             // console.log(key);
-            console.log(value)
-            // row.append("td").text(value)
+            // console.log(value)
+            row.append("td").text(value)
         })
     })
 
 
-    var inputELement = d3.select("#datetime")
-    var filterButton = d3.select("#filter-btn")
+    // var filteredData = results.filter(function(toronto_data){
+    //     return toronto_data.cluster_labels == 3
+    // });
+    // console.log(filteredData);
 
-    var test = inputElement.property("value")
+    var inputElement = d3.select("#cluster_labels")
+    // .on("change", runFunction)
+    var filterButton = d3.select("#filter-btn").on("click", runFunction)
 
-    // inputELement.on("change", runFunction)
-    // filterButton.on("click", runFunction)
+
+
+    // // console.log(results.cluster_labels)
+    function runFunction(){
+
+        // prevent page from refreshing
+        // d3.event.preventDefault();
+
+        // remove the table content
+        tableBody.html("")
+
+        var inputValue = inputElement.property("value")
+        console.log(inputValue);
+
+        // var buttonValue = filterButton.property('value')
+        // console.log(buttonValue)
+
+        var filteredData = results.filter(function(toronto_data){
+            return toronto_data.cluster_labels == inputValue;
+        });
+        console.log(filteredData)
+
+        filteredData.map(function(add_data){
+            var row = tableBody.append("tr")
+
+            Object.entries(add_data).forEach(function([key,value]){
+                row.append("td").text(value)
+            })
+        })
+
+    }    
+
+
+
 
 
     // function runFunction() {
