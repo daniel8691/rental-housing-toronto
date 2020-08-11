@@ -17,6 +17,21 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+
+    <style>
+        .center {
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%
+    }
+    p li {
+            font-size:15px
+        }
+        i {
+            font-size: 16px
+        }
+</style>
 </head>
 
 <body>
@@ -41,16 +56,16 @@
               <a class="nav-link" href="report.html">Findings</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Deep Learning algorithms
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="lstm.html">LSTM</a>
-                <a class="dropdown-item" href="fb_prophet.html">Facebook Prophet</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="future_studies.html">Future Studies</a>
-              </div>
-            </li>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Deep Learning algorithms
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="lstm.html">LSTM</a>
+                  <a class="dropdown-item" href="fb_prophet.html">Facebook Prophet</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="future_studies.html">Future Studies</a>
+                </div>
+              </li>
   
           </ul>
         </div>
@@ -67,31 +82,19 @@
     <br>
     <br>
     <div class="text-center">
-      <h1>Tableau Story</h1>
+      <h1>Facebook Profit</h1>
       <!-- <p>The Truth is Out There</p> -->
     </div>
     <hr>
-    <div class="container">
-        <div class='tableauPlaceholder' id='viz1596679837209' style='position: relative'><noscript>
-            <a href='https:&#47;&#47;github.com&#47;daniel8691&#47;rental-housing-toronto'>
-                <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;QH&#47;QHQ4RBP4S&#47;1_rss.png' style='border: none' />
-            </a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;QHQ4RBP4S' /> <param name='toolbar' value='yes' />
-                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;QH&#47;QHQ4RBP4S&#47;1.png' /> 
-                <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
-                <param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                
-                <script type='text/javascript'>                    
-                    var divElement = document.getElementById('viz1596679837209');      
-                    var vizElement = divElement.getElementsByTagName('object')[0]; 
-                    vizElement.style.width='1016px';vizElement.style.height='1014px';  
-                    var scriptElement = document.createElement('script');           
-                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement); 
-                </script>
+    <img class="center" src="site_pictures/fb_prophet_forecast.png" alt = "prophet_forecast" target = "_blank">
 
-    </div>
-    <footer class="footer">
-      <span class="bottom">UFO Sightings</span>
-    </footer>
+    <br>
+    <br>
+    <img class="center" src="site_pictures/fb_prophet_trend.png" alt = "fb_prediction_trend" target = "_blank">
+
+    <img class='center' src="site_pictures/fb_prophet_prediction.png" alt="fb_prediction" target="_blank">
+
+
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
   <script src="static/js/data.js"></script>

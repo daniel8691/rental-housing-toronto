@@ -18,14 +18,27 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
 
-    <script src = "https://d3js.org/d3.v5.min.js"></script>
-    <script src = "static/js/app.js"></script>
+    <style>
+            .center {
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%
+        }
+        p li {
+            font-size:15px
+        }
+        i {
+            font-size: 16px
+        }
+    </style>
+
 </head>
 
 <body>
   <div class="wrapper">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
             <img src = "site_pictures/toronto_logo.png" alt = "toronto_logo" width = "100" height = "36">
         </a>
         
@@ -35,10 +48,10 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="map_page.html">Map</a>
+              <a class="nav-link" href="#">Map</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="report.html">Findings</a>
@@ -54,7 +67,7 @@
                 <a class="dropdown-item" href="future_studies.html">Future Studies</a>
               </div>
             </li>
-           
+  
           </ul>
         </div>
       </nav>
@@ -70,67 +83,28 @@
     <br>
     <br>
     <div class="text-center">
-      <h1>Rental Market in Toronto</h1>
-      <!-- <p>The Truth is Out There</p> -->
+      <h1>LSTM Networks</h1>
+
     </div>
     <hr>
-    <div class="container">
-      <div class="row margin-top-50">
-        <div class="col-md-2">
-          <aside class="filters">
-            <div class="panel panel-default">
-              <div class="panel-heading">Filter Search</div>
-              <div class="panel-body">
-                <form>
-                  <div class="form-group">
-                    <ul class="list-group" id="filters">
-                      <li class="filter list-group-item">
-                        <label for="date">Enter a Cluster Number</label>
-                        <input class="form-control" id="cluster_labels" type="text" placeholder="eg. 1,2">
-                      </li>
-                    </ul>
-                  </div>
-                  <center>
-                    <button id="filter-btn" type="button" class="btn btn-default">Search</button>
-                  </center>
-                </form>
-              </div>
-            </div>
-          </aside>
-        </div>
-        <div class="col-md-10">
-          <div id="table-area" class="">
-            <table id="ufo-table" class="table table-striped">
-              <thead>
-                <tr>
-                  <th class="table-head">Postal Code</th>
-                  <th class="table-head">Cluster Labels</th>
-                  <th class="table-head">Address</th>
-                  <th class="table-head">sqft</th>
-                  <th class="table-head">Rent</th>
-                  <th class='table-head'>rent/sqft</th>
-                  <th class="table-head">Subway Station</th>
-                  <th class="table-head">Train Station</th>
-                  <th class="table-head">Bus Station</th>
-                  <th class="table-head">Bus Stop</th>
-                  <th class='table-head'>Shopping Mall</th>
-                  <th class='table-head'>Shopping Plaza</th>
-                  <th class='table-head'>Grocery Store</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer class="footer">
-      <!-- <span class="bottom">UFO Sightings</span> -->
-    </footer>
+    <center>
+      <p>
+        For the price prediction, I webscraped the <a href = "https://toronto.listing.ca/condo-price-history.htm" target="_blank">Toronto Listings</a> Website
+      </p>
+    </center>
+
+    <img class="center" src="site_pictures/seasonal_trends.png" alt = "boxplot_pic" target = "_blank">
+
+    <br>
+    <br>
+    <img class="center" src="site_pictures/test_prediction_lstm.png" alt = "boxplot_pic" target = "_blank">
+
+
+
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
-  <!-- <script src="static/js/data.js"></script> -->
-  <!-- <script src="static/js/app.js"></script> -->
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script>
 </body>
 
 </html>
