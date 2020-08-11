@@ -8,6 +8,6 @@ I will use web scrape my data from https://www.torontorentals.com by looping thr
 
 
 ## How to Open the Webpage
-git clone this link https://github.com/daniel8691/rental-housing-toronto.git and within the same foler, open up git bash and type in "Python -m http.server" and open up the webpage on Google Chrome using localhost:8000
+git clone this link https://github.com/daniel8691/rental-housing-toronto.git and within the same folder, open up git bash and type in "Python -m http.server" and open up the webpage on Google Chrome using localhost:8000
 
 Once the page is opened, look for a folder called "Templates" and feel feel to browse around the site!
