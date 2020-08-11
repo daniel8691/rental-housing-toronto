@@ -5,3 +5,9 @@ Some of the common indicators for the price of a property includes ease of acces
 
 ## Data
 I will use web scrape my data from https://www.torontorentals.com by looping through all the pages within my search result (one bedroom condo units). I tried using Kaggle.com for my dataset but I find most datasets to be outdated or missing specific information I need. The codes I used for scraping are located in my GitHub repository called Toronto-condo-scrape.ipynb. This scraped data will include the rental units' rent, address, postal code, number of bedrooms and bathrooms, and the square footage of the unit. After the web scrapping process is completed, I will use Python's Geopy library to obtain the geo coordinates of each rental property using its address.
+
+
+## How to Open the Webpage
+git clone this link https://github.com/daniel8691/rental-housing-toronto.git and within the same foler, open up git bash and type in "Python -m http.server" and open up the webpage on Google Chrome using localhost:8000
+
+Once the page is opened, look for a folder called "Templates" and feel feel to browse around the site!
