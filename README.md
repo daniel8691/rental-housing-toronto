@@ -1,5 +1,8 @@
 # rental-housing-toronto
 
+Visualizations for this project can be better viewed on 
+<a href="https://public.tableau.com/views/toronto_neighborhood_cluster_visualized_15957377283180/Story1?:language=en&:display_count=y&:origin=viz_share_link" target="_blank">Tableau Public</a>
+
 The Toronto's rental market has become quite competitive in recent years due to strong immigration numbers and job growth in the tech industry. The rental prices have shot to high levels, encouraged by the people's willingness to pay in order to live closer to their workplaces. For this analysis, I want to focus on the condo one-bedroom units because they are one of the most common choice for renters. 
 Some of the common indicators for the price of a property includes ease of access to infrastructures. Therefore, this analysis will focus on the distance the rental property is, from subway, bus, and train stations, bus stops, shopping malls and plazas, and grocery stores. This analysis aims to discover whether the high rent in the specific locations in the city of Toronto is justified by their locations. For instance, if a highly priced property does not have any grocery stores nearby, perhaps a potential renter can look at similarly priced options at another location within Toronto, that offers a closer proximity to grocery stores. 
 
