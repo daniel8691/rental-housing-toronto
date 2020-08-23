@@ -1,4 +1,4 @@
-# rental-housing-toronto
+# Rental Housing in Toronto
 
 Visualizations for this project can be better viewed on 
 <a href="https://public.tableau.com/views/toronto_neighborhood_cluster_visualized_15957377283180/Story1?:language=en&:display_count=y&:origin=viz_share_link" target="_blank">Tableau Public</a>
@@ -53,5 +53,5 @@ Cluster zero, as expected is the most expensive out of the four clusters because
 
 ![neighborhood_analysis](https://github.com/daniel8691/rental-housing-toronto/blob/master/templates/site_pictures/tableau_neighborhood_prices.jpg)
 
-Visualized which neightborhood is the most expensive to rent. A renter could use this information to determine whether the rent of the neighborhood is justified by shopping options and priximity to transit stations. For example, If a property is in the "M5R" neighborhood but there are no grocery stores or bus stops nearby, then the renter should think twice before choosing to rent in that location. 
+This project visualized which neighborhood is the most expensive to rent. A renter could use this information to determine whether the rent of the neighborhood is justified by shopping options and priximity to transit stations. For example, If a property is in the "M5R" neighborhood but there are no grocery stores or bus stops nearby, then the renter should think twice before choosing to rent in that location. 
 
